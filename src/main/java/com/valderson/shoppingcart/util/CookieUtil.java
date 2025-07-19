@@ -15,18 +15,20 @@ public class CookieUtil {
     public void addAuthCookie(HttpServletResponse response, String token) {
         Cookie cookie = new Cookie(jwtConfig.getCookieName(), token);
         cookie.setHttpOnly(true);
-        cookie.setSecure(false); // true em produção com HTTPS
+        cookie.setSecure(true); // true para HTTPS em produção
         cookie.setPath("/");
         cookie.setMaxAge(jwtConfig.getExpiration());
+        cookie.setAttribute("SameSite", "None");
         response.addCookie(cookie);
     }
 
     public void clearAuthCookie(HttpServletResponse response) {
         Cookie cookie = new Cookie(jwtConfig.getCookieName(), "");
         cookie.setHttpOnly(true);
-        cookie.setSecure(false); // true em produção com HTTPS
+        cookie.setSecure(true); // true para HTTPS em produção
         cookie.setPath("/");
         cookie.setMaxAge(0); // Remove o cookie
+        cookie.setAttribute("SameSite", "None");
         response.addCookie(cookie);
     }
 }
