@@ -12,7 +12,7 @@ public class CookieUtil {
 
     private final JwtConfig jwtConfig;
 
-    public void addAuthCookie(HttpServletResponse response, String token) {
+    public void addAuthCookie(final HttpServletResponse response, final String token) {
         Cookie cookie = new Cookie(jwtConfig.getCookieName(), token);
         cookie.setHttpOnly(true);
         cookie.setSecure(true); // true para HTTPS em produção
@@ -22,7 +22,7 @@ public class CookieUtil {
         response.addCookie(cookie);
     }
 
-    public void clearAuthCookie(HttpServletResponse response) {
+    public void clearAuthCookie(final HttpServletResponse response) {
         Cookie cookie = new Cookie(jwtConfig.getCookieName(), "");
         cookie.setHttpOnly(true);
         cookie.setSecure(true); // true para HTTPS em produção

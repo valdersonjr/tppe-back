@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Suppress DesignForExtension for Spring Boot configuration classes -->
+    <suppress checks="DesignForExtension" files=".*Config\.java"/>
+    
+    <!-- Suppress DesignForExtension for Spring Boot main application class -->
+    <suppress checks="DesignForExtension" files=".*Application\.java"/>
+    
+    <!-- Suppress DesignForExtension for DTOs and entities -->
+    <suppress checks="DesignForExtension" files=".*(dto|entity).*\.java"/>
+    
+    <!-- Suppress HiddenField for Lombok-generated setters and constructors -->
+    <suppress checks="HiddenField" files=".*(dto|entity).*\.java"/>
+    
+    <!-- Suppress FinalParameters for Spring controllers and services -->
+    <suppress checks="FinalParameters" files=".*(Controller|Service|Repository)\.java"/>
+    
+    <!-- Suppress VisibilityModifier for entities with JPA annotations -->
+    <suppress checks="VisibilityModifier" files=".*entity.*\.java"/>
+    
+    <!-- Suppress MagicNumber for test files -->
+    <suppress checks="MagicNumber" files=".*Test.*\.java"/>
+    
+    <!-- Suppress certain checks for test files -->
+    <suppress checks="DesignForExtension|FinalParameters|HiddenField" files=".*Test.*\.java"/>
+    
+    <!-- Suppress TodoComment for development phase -->
+    <suppress checks="TodoComment" files=".*\.java"/>
+</suppressions>

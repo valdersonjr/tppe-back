@@ -20,9 +20,9 @@ public interface CartItemRepository extends JpaRepository<CartItem, Long> {
     List<CartItem> findAllByShoppingCartId(Long shoppingCartId);
 
     // Consulta usando navegação por atributos
-    List<CartItem> findByShoppingCart_Id(Long shoppingCartId);
+    List<CartItem> findByShoppingCartId(Long shoppingCartId);
 
-    Optional<CartItem> findByShoppingCart_IdAndProduct_Id(Long shoppingCartId, Long productId);
+    Optional<CartItem> findByShoppingCartIdAndProductId(Long shoppingCartId, Long productId);
 
     @Modifying
     @Query("DELETE FROM CartItem ci WHERE ci.shoppingCart.id = :cartId")
