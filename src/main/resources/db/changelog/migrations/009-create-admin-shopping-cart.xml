@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="009-create-admin-shopping-cart" author="system">
+        <!-- Create shopping cart for admin user -->
+        <insert tableName="shopping_carts" schemaName="public">
+            <column name="user_id" value="1"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+        
+        <!-- Add some items to admin's cart for demonstration -->
+        <insert tableName="cart_items" schemaName="public">
+            <column name="shopping_cart_id" value="1"/>
+            <column name="product_id" value="1"/> <!-- Samsung Galaxy S24 -->
+            <column name="quantity" value="1"/>
+            <column name="added_at" valueDate="now()"/>
+        </insert>
+        
+        <insert tableName="cart_items" schemaName="public">
+            <column name="shopping_cart_id" value="1"/>
+            <column name="product_id" value="3"/> <!-- Sony Headphones -->
+            <column name="quantity" value="1"/>
+            <column name="added_at" valueDate="now()"/>
+        </insert>
+        
+        <insert tableName="cart_items" schemaName="public">
+            <column name="shopping_cart_id" value="1"/>
+            <column name="product_id" value="6"/> <!-- Nike Air Max -->
+            <column name="quantity" value="2"/>
+            <column name="added_at" valueDate="now()"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

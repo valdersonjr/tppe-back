@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="007-insert-admin-user" author="system">
+        <insert tableName="users" schemaName="public">
+            <column name="name" value="Administrator"/>
+            <column name="email" value="admin@admin.com"/>
+            <!-- BCrypt hash for password "123123" -->
+            <column name="password_hash" value="$2a$10$YGVkZjM2ZjE4ZjIyMzQ3N.rQ9HZsR8JLKHw5mE9vOmV2kDsN8XqSa"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

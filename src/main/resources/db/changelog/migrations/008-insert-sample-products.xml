@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="008-insert-sample-products" author="system">
+        <!-- Produtos de Tecnologia -->
+        <insert tableName="products" schemaName="public">
+            <column name="name" value="Smartphone Samsung Galaxy S24"/>
+            <column name="description" value="Smartphone Android de última geração com 256GB de armazenamento e câmera tripla"/>
+            <column name="price" value="2999.99"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+        
+        <insert tableName="products" schemaName="public">
+            <column name="name" value="Notebook Dell XPS 13"/>
+            <column name="description" value="Ultrabook premium com Intel Core i7, 16GB RAM e SSD 512GB"/>
+            <column name="price" value="8499.90"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+        
+        <insert tableName="products" schemaName="public">
+            <column name="name" value="Fone de Ouvido Sony WH-1000XM5"/>
+            <column name="description" value="Fone com cancelamento ativo de ruído e até 30h de bateria"/>
+            <column name="price" value="1899.99"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+        
+        <!-- Produtos para Casa -->
+        <insert tableName="products" schemaName="public">
+            <column name="name" value="Smart TV LG 65 4K OLED"/>
+            <column name="description" value="Smart TV OLED 65 polegadas com tecnologia 4K e sistema WebOS"/>
+            <column name="price" value="6799.00"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+        
+        <insert tableName="products" schemaName="public">
+            <column name="name" value="Cafeteira Nespresso Vertuo"/>
+            <column name="description" value="Máquina de café expresso automática com sistema de cápsulas"/>
+            <column name="price" value="799.90"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+        
+        <!-- Produtos de Vestuário -->
+        <insert tableName="products" schemaName="public">
+            <column name="name" value="Tênis Nike Air Max 270"/>
+            <column name="description" value="Tênis esportivo casual com tecnologia de amortecimento Air Max"/>
+            <column name="price" value="599.99"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+        
+        <insert tableName="products" schemaName="public">
+            <column name="name" value="Jaqueta Adidas Originals"/>
+            <column name="description" value="Jaqueta corta-vento impermeável da linha Originals"/>
+            <column name="price" value="329.90"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+        
+        <!-- Produtos de Livros/Educação -->
+        <insert tableName="products" schemaName="public">
+            <column name="name" value="Livro: Clean Code - Robert Martin"/>
+            <column name="description" value="Guia essencial para desenvolvedores sobre como escrever código limpo e eficiente"/>
+            <column name="price" value="89.90"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+        
+        <insert tableName="products" schemaName="public">
+            <column name="name" value="Kindle Paperwhite 11ª Geração"/>
+            <column name="description" value="E-reader à prova d'água com tela de 6.8 polegadas e luz ajustável"/>
+            <column name="price" value="549.00"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+        
+        <!-- Produtos de Gaming -->
+        <insert tableName="products" schemaName="public">
+            <column name="name" value="PlayStation 5 Console"/>
+            <column name="description" value="Console de última geração com SSD ultra-rápido e tecnologia Ray Tracing"/>
+            <column name="price" value="4199.99"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

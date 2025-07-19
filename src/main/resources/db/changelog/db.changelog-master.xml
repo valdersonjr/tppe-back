@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <!-- Include all migration files -->
+    <!-- Schema Creation -->
+    <include file="db/changelog/migrations/001-create-users-table.xml"/>
+    <include file="db/changelog/migrations/002-create-products-table.xml"/>
+    <include file="db/changelog/migrations/003-create-carts-table.xml"/>
+    <include file="db/changelog/migrations/004-create-cart-items-table.xml"/>
+    <include file="db/changelog/migrations/005-create-orders-table.xml"/>
+    <include file="db/changelog/migrations/006-create-order-items-table.xml"/>
+    
+    <!-- Data Population -->
+    <include file="db/changelog/migrations/007-insert-admin-user.xml"/>
+    <include file="db/changelog/migrations/008-insert-sample-products.xml"/>
+    <include file="db/changelog/migrations/009-create-admin-shopping-cart.xml"/>
+    <include file="db/changelog/migrations/010-fix-admin-password.xml"/>
+
+</databaseChangeLog>
